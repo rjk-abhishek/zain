@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canon Printer Setup &amp; Network Support — PrintLine</title>
+  <meta name="description" content="Resolve Canon PIXMA and imageCLASS connection failures, IJ Network utility errors, and scan failures with our dedicated specialists." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --paper:#F1F0EC;
+      --blue:#68dfe9;
+      --paper-raised:#FFFFFF;
+      --key:#14181C;
+      --key-soft:#4A5158;
+      --brand-red:#CC0000; /* Canon Red Accent */
+      --magenta:#B23A6B;
+      --yellow:#E8B23D;
+      --line:#D6D3C8;
+      --radius:2px;
+    }
+    *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{
+      margin:0;
+      background:var(--blue);
+      color:var(--key);
+      font-family:'IBM Plex Sans', sans-serif;
+      line-height:1.5;
+      -webkit-font-smoothing:antialiased;
+    }
+    h1,h2,h3,.mono{font-family:'IBM Plex Mono', monospace;}
+    a{color:var(--brand-red);}
+    .wrap{max-width:1140px; margin:0 auto; padding:0 24px;}
+
+    /* Navigation */
+    header.site{
+      position:sticky; top:0; z-index:40;
+      background:rgba(241,240,236,0.92);
+      backdrop-filter:blur(6px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 24px;}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:600; letter-spacing:.02em;}
+    .brand .dots{display:flex; gap:4px;}
+    .brand .dots span{width:7px;height:7px;border-radius:50%;display:inline-block;}
+    .brand .dots span:nth-child(1){background:var(--brand-red);}
+    .brand .dots span:nth-child(2){background:var(--magenta);}
+    .brand .dots span:nth-child(3){background:var(--yellow);}
+    .nav-links{display:flex; gap:28px; font-size:14px; align-items:center;}
+    .nav-links a{color:var(--key); text-decoration:none; border-bottom:1px solid transparent;}
+    .nav-links a:hover{border-color:var(--key);}
+    .nav-cta{
+      font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600;
+      background:var(--key); color:var(--paper); padding:9px 16px; border-radius:var(--radius);
+      text-decoration:none; white-space:nowrap;
+    }
+    .nav-cta:hover{background:var(--brand-red);}
+    @media (max-width:760px){ .nav-links{display:none;} }
+
+    /* Brand Hero */
+    .brand-hero { padding: 64px 0; background: var(--paper-raised); border-bottom: 1px solid var(--line); }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
+    .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--key-soft); margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.08em;}
+    .brand-hero h1 { font-size: clamp(30px, 4vw, 44px); margin: 0 0 16px; line-height: 1.1; font-weight: 600;}
+    .brand-hero h1 span { color: var(--brand-red); }
+    .brand-hero p { font-size: 16px; color: var(--key-soft); margin-bottom: 24px; max-width: 50ch; }
+    .btn { font-family: 'IBM Plex Mono', monospace; font-weight: 600; padding: 12px 20px; border-radius: var(--radius); text-decoration: none; display: inline-block; cursor: pointer; border: 1px solid var(--key);}
+    .btn-primary { background: var(--key); color: var(--paper); }
+    .btn-primary:hover { background: var(--brand-red); border-color: var(--brand-red); }
+    
+    /* Issue list */
+    .issues-section { padding: 60px 0; }
+    .issue-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .issue-item { background: var(--paper-raised); padding: 24px; border-left: 2px solid var(--brand-red); border-radius: 4px; border-top: 1px solid var(--line); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .issue-item h3 { margin: 0 0 8px; font-size: 17px; }
+    .issue-item p { margin: 0 0 14px; font-size: 14px; color: var(--key-soft); }
+    .issue-item button { background: none; border: none; color: var(--brand-red); font-family: 'IBM Plex Mono', monospace; font-weight:600; font-size: 13px; cursor: pointer; padding: 0; }
+    .issue-item button:hover { text-decoration: underline; }
+
+    @media (max-width: 820px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .issue-list { grid-template-columns: 1fr; }
+    }
+
+    /* Footer styling */
+    footer { padding:44px 0 30px; font-size:13px; color:var(--key-soft); border-top:1px solid var(--line); }
+    .foot-grid { display:flex; justify-content:space-between; gap:30px; flex-wrap:wrap; margin-bottom:26px; }
+    .foot-brand { max-width:340px; }
+    .foot-links { display:flex; gap:50px; flex-wrap:wrap; }
+    .foot-col h4 { font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--key); margin:0 0 12px; }
+    .foot-col a { display:block; color:var(--key-soft); text-decoration:none; margin-bottom:8px; }
+    .foot-col a:hover { color:var(--brand-red); }
+    .foot-bottom { border-top:1px solid var(--line); padding-top:20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+    .disclaimer-box { font-size:11.5px; color:#8A8F94; max-width:900px; margin-top:14px; }
+
+    /* Chat Panel Styles */
+    #chat-launcher{ position:fixed; right:22px; bottom:22px; z-index:60; background:var(--key); color:var(--paper); border:none; border-radius:50%; width:58px; height:58px; cursor:pointer; box-shadow:0 10px 26px -8px rgba(20,24,28,.55); display:flex; align-items:center; justify-content:center; }
+    #chat-launcher:hover{background:var(--brand-red);}
+    #chat-launcher svg{width:24px;height:24px;}
+    .launcher-dot{position:absolute; top:8px; right:8px; width:9px;height:9px;border-radius:50%; background:var(--magenta); border:2px solid var(--paper);}
+    #chat-panel{ position:fixed; right:22px; bottom:92px; z-index:60; width:min(360px, calc(100vw - 44px)); max-height:min(560px, calc(100vh - 140px)); background:var(--paper-raised); border:1px solid var(--line); border-radius:8px; box-shadow:0 24px 60px -20px rgba(20,24,28,.4); display:flex; flex-direction:column; overflow:hidden; transform:translateY(12px) scale(.98); opacity:0; pointer-events:none; transition:all .18s ease; }
+    #chat-panel.open{transform:translateY(0) scale(1); opacity:1; pointer-events:auto;}
+    .chat-head{ background:var(--key); color:var(--paper); padding:12px 16px; display:flex; align-items:center; justify-content:space-between; }
+    .chat-head .who{display:flex; align-items:center; gap:10px; font-size:14px;}
+    .chat-head .who-text{display:flex; flex-direction:column; line-height:1.25;}
+    .chat-head .who-text strong{font-size:14px; font-weight:600;}
+    .chat-head .who-text small{font-size:12px; color:#9FB3B1;}
+    .chat-head .agent-avatar{ position:relative; width:38px; height:38px; border-radius:50%; background:var(--brand-red); color:#E7F3F1; display:flex; align-items:center; justify-content:center; flex:0 0 auto; }
+    .chat-head .agent-avatar svg{width:20px;height:20px;}
+    .chat-head .online-dot{ position:absolute; right:-1px; bottom:-1px; width:10px; height:10px; border-radius:50%; background:#3fd0da; border:2px solid var(--key); }
+    .chat-head button{background:none; border:none; color:var(--paper); cursor:pointer; font-size:18px; line-height:1; opacity:.8;}
+    .chat-head button:hover{opacity:1;}
+    .chat-body{ flex:1; overflow-y:auto; padding:16px; display:flex; flex-direction:column; gap:10px; font-size:14px; background:var(--paper); }
+    .msg{max-width:82%; padding:10px 13px; border-radius:12px; line-height:1.4;}
+    .msg.bot{background:var(--paper-raised); border:1px solid var(--line); align-self:flex-start; border-bottom-left-radius:3px;}
+    .msg.user{background:var(--brand-red); color:#fff; align-self:flex-end; border-bottom-right-radius:3px;}
+    .quick-replies{display:flex; flex-wrap:wrap; gap:8px; margin-top:2px;}
+    .quick-replies button{ font-family:'IBM Plex Sans',sans-serif; font-size:13px; background:var(--paper-raised); border:1px solid var(--brand-red); color:var(--brand-red); padding:8px 12px; border-radius:16px; cursor:pointer;}
+    .quick-replies button:hover{background:var(--brand-red); color:#fff;}
+    .chat-input-row{ display:flex; gap:8px; padding:12px; border-top:1px solid var(--line); background:var(--paper-raised); }
+    .chat-input-row input{ flex:1; border:1px solid var(--line); border-radius:20px; padding:10px 14px; font-size:14px; outline:none; }
+    .chat-input-row input:focus{border-color:var(--brand-red);}
+    .chat-input-row button{ background:var(--key); color:var(--paper); border:none; border-radius:50%; width:38px; height:38px; cursor:pointer; display:flex; align-items:center; justify-content:center; flex:0 0 auto; }
+    .chat-input-row button:hover{background:var(--brand-red);}
+  </style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <div class="brand">
+      <span class="dots"><span></span><span></span><span></span></span>
+      PrintLine Support
+    </div>
+    <nav class="nav-links">
+      <a href="index.html#issues">Issues We Fix</a>
+      <!-- <a href="index.html#brands">Driver Help</a> -->
+      <a href="brand-hp.html">HP</a>
+      <a href="brand-brother.html">Brother</a>
+      <a href="brand-canon.html">Canon</a>
+      <a href="brand-epson.html">Epson</a>
+      <a href="index.html#how">How It Works</a>
+      <a href="index.html#reviews">Reviews</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="#" class="nav-cta" id="nav-chat-open">Start Canon chat</a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="brand-hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow" style="color: var(--brand-red);">On-Demand Solutions</div>
+      <h1>Setup &amp; Configuration for <span>Canon Printers</span></h1>
+      <p>Struggling with a wireless Canon PIXMA or imageCLASS printer? We help bypass IJ Network Tool connection freezes, driver communication loops, and scanning failure errors.</p>
+      <button class="btn btn-primary" id="hero-chat-open">Resolve Canon Issue Now</button>
+    </div>
+    <div style="background: var(--paper); border: 1px solid var(--line); padding: 30px; border-radius: 6px;">
+      <h3 style="margin-top:0;">Canon Diagnostics</h3>
+      <ul style="padding-left: 20px; margin-bottom: 0; font-size: 14.5px; color: var(--key-soft);">
+        <li style="margin-bottom: 10px;">Fixing Canon "MP Drivers Unavailable" alerts.</li>
+        <li style="margin-bottom: 10px;">Re-linking IJ Network Tool connections.</li>
+        <li style="margin-bottom: 10px;">Correcting paper type mismatch &amp; support codes (e.g. 1403).</li>
+        <li>Bypassing Canon Quick Menu utility crashes.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ISSUES ===== -->
+<section class="issues-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Canon Systems Check</div>
+      <h2 class="section-title">Common Canon Errors We Support</h2>
+    </div>
+    <div class="issue-list">
+      <div class="issue-item">
+        <h3>Scanner Communication Error</h3>
+        <p>You can execute print jobs, but scanning tools report communication failures (e.g. Code 2,140,21).</p>
+        <button class="go" data-topic="Canon Scan Utility errors">Start diagnostic →</button>
+      </div>
+      <div class="issue-item">
+        <h3>IJ Network Tool Crash</h3>
+        <p>The utility freezes or fails to identify your wireless PIXMA printer during wireless router setup.</p>
+        <button class="go" data-topic="Canon IJ Network Tool problems">Start diagnostic →</button>
+      </div>
+      <div class="issue-item">
+        <h3>Canon Code 1403 / Printhead</h3>
+        <p>The panel displays printhead detection problems, ink conflicts, or alignment warnings.</p>
+        <button class="go" data-topic="Canon printhead & code errors">Start diagnostic →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand" style="margin-bottom:12px;">
+          <span class="dots"><span></span><span></span><span></span></span>
+          PrintLine Support
+        </div>
+        <p>Premium online technical support for wireless printers, scanners, local driver installations, and persistent system errors.</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h4>Navigation</h4>
+          <a href="index.html#issues">Issues We Fix</a>
+          <a href="index.html#brands">Driver Help</a>
+          <a href="index.html#how">How It Works</a>
+        </div>
+        <div class="foot-col">
+          <h4>Our Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 PrintLine Support. All rights reserved.</div>
+      <div class="disclaimer-box">
+        Disclaimer: PrintLine Support is an independent provider of technical support services. We are not affiliated with, authorized by, sponsored by, or endorsed by Canon Inc., or any specific hardware vendor. Canon, PIXMA, imageCLASS and product names are used purely for descriptive reference purposes.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Chat Widget -->
+<button id="chat-launcher" aria-haspopup="true" aria-expanded="false" aria-label="Open live chat widget">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+  <span class="launcher-dot"></span>
+</button>
+
+<div id="chat-panel">
+  <div class="chat-head">
+    <div class="who">
+      <div class="agent-avatar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg><span class="online-dot"></span></div>
+      <div class="who-text"><strong>Laura</strong><small>PrintLine Support</small></div>
+    </div>
+    <button id="chat-close" aria-label="Close chat window">×</button>
+  </div>
+  <div class="chat-body" id="chat-body"></div>
+  <div class="chat-input-row" id="chat-input-row" hidden>
+    <input type="text" id="chat-input" placeholder="Type your message...">
+    <button id="chat-send">
+      <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+    </button>
+  </div>
+</div>
+
+<script src="chat1.js"></script>
+<script>
+  // Setup quick trigger for brand-specific topics
+  document.querySelectorAll('.go').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const topic = btn.getAttribute('data-topic');
+      if (typeof openChatWithTopic === 'function') {
+        openChatWithTopic(topic);
+      } else {
+        document.getElementById('chat-launcher').click();
+      }
+    });
+  });
+</script>
+</body>
+</html>
