@@ -1,69 +1,171 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18366252825"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'AW-18366252825');
+  </script>
   <title>Contact Us — PrintLine Support</title>
-  <meta name="description" content="Reach back directly to PrintLine support specialists via our physical diagnostic submission request form." />
+  <meta name="description"
+    content="Reach back directly to PrintLine support specialists via our physical diagnostic submission request form." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
   <style>
     /* ----- global reset & variables ----- */
-    :root{
-      --paper:#F1F0EC;
-      --blue:#68dfe9;
-      --paper-raised:#FFFFFF;
-      --key:#14181C;
-      --key-soft:#4A5158;
-      --cyan:#0E7C86;
-      --cyan-deep:#0A5F67;
-      --magenta:#B23A6B;
-      --yellow:#E8B23D;
-      --line:#D6D3C8;
-      --radius:2px;
+    :root {
+      --paper: #F1F0EC;
+      --blue: #68dfe9;
+      --paper-raised: #FFFFFF;
+      --key: #14181C;
+      --key-soft: #4A5158;
+      --cyan: #0E7C86;
+      --cyan-deep: #0A5F67;
+      --magenta: #B23A6B;
+      --yellow: #E8B23D;
+      --line: #D6D3C8;
+      --radius: 2px;
     }
-    *{box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
-    body{
-      margin:0;
-      background:var(--blue);
-      color:var(--key);
-      font-family:'IBM Plex Sans', sans-serif;
-      line-height:1.5;
-      -webkit-font-smoothing:antialiased;
+
+    * {
+      box-sizing: border-box;
     }
-    h1,h2,h3,.mono{font-family:'IBM Plex Mono', monospace;}
-    a{color:var(--cyan-deep);}
-    .wrap{max-width:1140px; margin:0 auto; padding:0 24px;}
-    @media (prefers-reduced-motion: reduce){ *{animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important;} }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--blue);
+      color: var(--key);
+      font-family: 'IBM Plex Sans', sans-serif;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1,
+    h2,
+    h3,
+    .mono {
+      font-family: 'IBM Plex Mono', monospace;
+    }
+
+    a {
+      color: var(--cyan-deep);
+    }
+
+    .wrap {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
 
     /* ----- navigation ----- */
-    header.site{
-      position:sticky; top:0; z-index:40;
-      background:rgba(241,240,236,0.92);
-      backdrop-filter:blur(6px);
-      border-bottom:1px solid var(--line);
+    header.site {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(241, 240, 236, 0.92);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--line);
     }
-    .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 24px;}
-    .brand{display:flex; align-items:center; gap:10px; font-weight:600; letter-spacing:.02em;}
-    .brand .dots{display:flex; gap:4px;}
-    .brand .dots span{width:7px;height:7px;border-radius:50%;display:inline-block;}
-    .brand .dots span:nth-child(1){background:var(--cyan);}
-    .brand .dots span:nth-child(2){background:var(--magenta);}
-    .brand .dots span:nth-child(3){background:var(--yellow);}
-    .nav-links{display:flex; gap:28px; font-size:14px; align-items:center;}
-    .nav-links a{color:var(--key); text-decoration:none; border-bottom:1px solid transparent;}
-    .nav-links a:hover{border-color:var(--key);}
-    .nav-cta{
-      font-family:'IBM Plex Mono',monospace;
-      font-size:13px; font-weight:600;
-      background:var(--key); color:var(--paper);
-      padding:9px 16px; border-radius:var(--radius);
-      text-decoration:none; white-space:nowrap;
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 24px;
     }
-    .nav-cta:hover{background:var(--cyan-deep);}
-    @media (max-width:760px){ .nav-links{display:none;} }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      letter-spacing: .02em;
+    }
+
+    .brand .dots {
+      display: flex;
+      gap: 4px;
+    }
+
+    .brand .dots span {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .brand .dots span:nth-child(1) {
+      background: var(--cyan);
+    }
+
+    .brand .dots span:nth-child(2) {
+      background: var(--magenta);
+    }
+
+    .brand .dots span:nth-child(3) {
+      background: var(--yellow);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-size: 14px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--key);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    .nav-links a:hover {
+      border-color: var(--key);
+    }
+
+    .nav-cta {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      background: var(--key);
+      color: var(--paper);
+      padding: 9px 16px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover {
+      background: var(--cyan-deep);
+    }
+
+    @media (max-width:760px) {
+      .nav-links {
+        display: none;
+      }
+    }
 
     /* ----- page styling sections ----- */
     .page-section {
@@ -72,27 +174,31 @@
       border-bottom: 1px solid var(--line);
       padding: 60px 0;
     }
+
     .page-section .section-head {
       margin-bottom: 32px;
       max-width: 640px;
     }
+
     .page-section .section-head h2 {
       font-size: clamp(28px, 4vw, 38px);
       margin-bottom: 12px;
       font-weight: 600;
     }
+
     .page-section .section-head p {
       font-size: 16px;
       color: var(--key-soft);
       max-width: 60ch;
     }
-    .section-eyebrow{
-      font-family:'IBM Plex Mono',monospace; 
-      font-size:12px; 
-      letter-spacing:.08em; 
-      text-transform:uppercase; 
-      color:var(--cyan-deep); 
-      margin-bottom:10px;
+
+    .section-eyebrow {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--cyan-deep);
+      margin-bottom: 10px;
     }
 
     /* contact form structure */
@@ -101,18 +207,24 @@
       grid-template-columns: 3fr 2fr;
       gap: 40px;
     }
+
     @media (max-width: 760px) {
-      .contact-grid { grid-template-columns: 1fr; }
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
     }
+
     .contact-form {
       background: var(--paper);
       padding: 30px 28px;
       border-radius: 8px;
       border: 1px solid var(--line);
     }
+
     .contact-form .field {
       margin-bottom: 18px;
     }
+
     .contact-form label {
       display: block;
       font-weight: 500;
@@ -120,6 +232,7 @@
       margin-bottom: 6px;
       color: var(--key);
     }
+
     .contact-form input,
     .contact-form textarea,
     .contact-form select {
@@ -132,15 +245,18 @@
       background: var(--paper-raised);
       outline: none;
     }
+
     .contact-form input:focus,
     .contact-form textarea:focus,
     .contact-form select:focus {
       border-color: var(--cyan-deep);
     }
+
     .contact-form textarea {
       min-height: 120px;
       resize: vertical;
     }
+
     .contact-form .btn-submit {
       background: var(--cyan-deep);
       color: white;
@@ -154,38 +270,46 @@
       width: 100%;
       margin-top: 6px;
     }
+
     .contact-form .btn-submit:hover {
       background: var(--key);
     }
+
     .contact-info {
       background: var(--paper-raised);
       padding: 30px 24px;
       border: 1px solid var(--line);
       border-radius: 8px;
     }
+
     .contact-info h3 {
       margin-top: 0;
       font-size: 18px;
     }
+
     .contact-info .info-item {
       display: flex;
       gap: 12px;
       margin-bottom: 20px;
       align-items: flex-start;
     }
+
     .contact-info .info-item .icon {
       font-size: 20px;
       line-height: 1.2;
     }
+
     .contact-info .info-item .content {
       font-size: 14px;
       color: var(--key-soft);
     }
+
     .contact-info .info-item .content strong {
       color: var(--key);
       display: block;
       font-weight: 600;
     }
+
     .contact-success {
       display: none;
       background: #dff0d8;
@@ -199,291 +323,670 @@
     }
 
     /* footer */
-    footer{padding:44px 0 30px; font-size:13px; color:var(--key-soft); border-top:1px solid var(--line);}
-    .foot-grid{display:flex; justify-content:space-between; gap:30px; flex-wrap:wrap; margin-bottom:26px;}
-    .foot-brand{max-width:340px;}
-    .foot-links{display:flex; gap:50px; flex-wrap:wrap;}
-    .foot-col h4{font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--key); margin:0 0 12px;}
-    .foot-col a{display:block; color:var(--key-soft); text-decoration:none; margin-bottom:8px;}
-    .foot-col a:hover{color:var(--cyan-deep);}
-    .foot-bottom{border-top:1px solid var(--line); padding-top:20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;}
-    .disclaimer-box{font-size:11.5px; color:#8A8F94; max-width:900px; margin-top:14px;}
+    footer {
+      padding: 44px 0 30px;
+      font-size: 13px;
+      color: var(--key-soft);
+      border-top: 1px solid var(--line);
+    }
+
+    .foot-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
+    }
+
+    .foot-brand {
+      max-width: 340px;
+    }
+
+    .foot-links {
+      display: flex;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .foot-col h4 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--key);
+      margin: 0 0 12px;
+    }
+
+    .foot-col a {
+      display: block;
+      color: var(--key-soft);
+      text-decoration: none;
+      margin-bottom: 8px;
+    }
+
+    .foot-col a:hover {
+      color: var(--cyan-deep);
+    }
+
+    .foot-bottom {
+      border-top: 1px solid var(--line);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .disclaimer-box {
+      font-size: 11.5px;
+      color: #8A8F94;
+      max-width: 900px;
+      margin-top: 14px;
+    }
 
     /* chat widget */
-    #chat-launcher{
-      position:fixed; right:22px; bottom:22px; z-index:60;
-      background:var(--key); color:var(--paper); border:none; border-radius:50%;
-      width:58px; height:58px; cursor:pointer; box-shadow:0 10px 26px -8px rgba(20,24,28,.55);
-      display:flex; align-items:center; justify-content:center;
+    #chat-launcher {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 60;
+      background: var(--key);
+      color: var(--paper);
+      border: none;
+      border-radius: 50%;
+      width: 58px;
+      height: 58px;
+      cursor: pointer;
+      box-shadow: 0 10px 26px -8px rgba(20, 24, 28, .55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    #chat-launcher:hover{background:var(--cyan-deep);}
-    #chat-launcher svg{width:24px;height:24px;}
-    .launcher-dot{position:absolute; top:8px; right:8px; width:9px;height:9px;border-radius:50%; background:var(--magenta); border:2px solid var(--paper);}
-    #chat-panel{
-      position:fixed; right:22px; bottom:92px; z-index:60;
-      width:min(360px, calc(100vw - 44px)); max-height:min(560px, calc(100vh - 140px));
-      background:var(--paper-raised); border:1px solid var(--line); border-radius:8px;
-      box-shadow:0 24px 60px -20px rgba(20,24,28,.4);
-      display:flex; flex-direction:column; overflow:hidden;
-      transform:translateY(12px) scale(.98); opacity:0; pointer-events:none; transition:all .18s ease;
+
+    #chat-launcher:hover {
+      background: var(--cyan-deep);
     }
-    #chat-panel.open{transform:translateY(0) scale(1); opacity:1; pointer-events:auto;}
-    .chat-head{
-      background:var(--key); color:var(--paper); padding:12px 16px; display:flex; align-items:center; justify-content:space-between;
+
+    #chat-launcher svg {
+      width: 24px;
+      height: 24px;
     }
-    .chat-head .who{display:flex; align-items:center; gap:10px; font-size:14px;}
-    .chat-head .who-text{display:flex; flex-direction:column; line-height:1.25;}
-    .chat-head .who-text strong{font-size:14px; font-weight:600;}
-    .chat-head .who-text small{font-size:12px; color:#9FB3B1; font-weight:400;}
-    .chat-head .agent-avatar{
-      position:relative; width:38px; height:38px; border-radius:50%;
-      background:var(--cyan-deep); color:#E7F3F1; display:flex; align-items:center; justify-content:center; flex:0 0 auto;
+
+    .launcher-dot {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--magenta);
+      border: 2px solid var(--paper);
     }
-    .chat-head .agent-avatar svg{width:20px;height:20px;}
-    .chat-head .online-dot{
-      position:absolute; right:-1px; bottom:-1px; width:10px; height:10px; border-radius:50%;
-      background:#3fd0da; border:2px solid var(--key);
+
+    #chat-panel {
+      position: fixed;
+      right: 22px;
+      bottom: 92px;
+      z-index: 60;
+      width: min(360px, calc(100vw - 44px));
+      max-height: min(560px, calc(100vh - 140px));
+      background: var(--paper-raised);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 24px 60px -20px rgba(20, 24, 28, .4);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transform: translateY(12px) scale(.98);
+      opacity: 0;
+      pointer-events: none;
+      transition: all .18s ease;
     }
-    .chat-head button{background:none; border:none; color:var(--paper); cursor:pointer; font-size:18px; line-height:1; opacity:.8;}
-    .chat-head button:hover{opacity:1;}
-    .prechat-card{
-      background:var(--paper-raised); border:1px solid var(--line); border-radius:8px;
-      padding:20px; margin:2px 0;
+
+    #chat-panel.open {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+      pointer-events: auto;
     }
-    .prechat-card p{margin:0 0 16px; font-size:15px; font-weight:600; color:var(--key);}
-    .prechat-field{margin-bottom:14px;}
-    .prechat-field label{display:block; font-size:13px; color:var(--key-soft); margin-bottom:6px; font-weight:500;}
-    .prechat-field input{
-      width:100%; border:1px solid var(--line); border-radius:6px; padding:10px 12px;
-      font-size:14px; font-family:'IBM Plex Sans',sans-serif; outline:none; background:var(--paper);
+
+    .chat-head {
+      background: var(--key);
+      color: var(--paper);
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-    .prechat-field input:focus{border-color:var(--cyan-deep); background:var(--paper-raised);}
-    .prechat-field .field-error{color:var(--magenta); font-size:12px; margin-top:5px; display:none;}
-    .prechat-field.invalid input{border-color:var(--magenta);}
-    .prechat-field.invalid .field-error{display:block;}
-    .prechat-submit{
-      width:100%; margin-top:4px; background:var(--cyan-deep); color:#fff; border:none;
-      font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:14px;
-      padding:13px 16px; border-radius:24px; cursor:pointer;
+
+    .chat-head .who {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
     }
-    .prechat-submit:hover{background:var(--key);}
-    .prechat-submit:disabled{opacity:.6; cursor:not-allowed;}
-    .chat-body{
-      flex:1; overflow-y:auto; padding:16px; display:flex; flex-direction:column; gap:10px;
-      font-size:14px; background:var(--paper);
+
+    .chat-head .who-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.25;
     }
-    .msg{max-width:82%; padding:10px 13px; border-radius:12px; line-height:1.4;}
-    .msg.bot{background:var(--paper-raised); border:1px solid var(--line); align-self:flex-start; border-bottom-left-radius:3px;}
-    .msg.user{background:var(--cyan-deep); color:#fff; align-self:flex-end; border-bottom-right-radius:3px;}
-    .quick-replies{display:flex; flex-wrap:wrap; gap:8px; margin-top:2px;}
-    .quick-replies button{
-      font-family:'IBM Plex Sans',sans-serif; font-size:13px; background:var(--paper-raised);
-      border:1px solid var(--cyan-deep); color:var(--cyan-deep); padding:8px 12px; border-radius:16px; cursor:pointer;
+
+    .chat-head .who-text strong {
+      font-size: 14px;
+      font-weight: 600;
     }
-    .quick-replies button:hover{background:var(--cyan-deep); color:#fff;}
-    .chat-input-row{
-      display:flex; gap:8px; padding:12px; border-top:1px solid var(--line); background:var(--paper-raised);
+
+    .chat-head .who-text small {
+      font-size: 12px;
+      color: #9FB3B1;
+      font-weight: 400;
     }
-    .chat-input-row input{
-      flex:1; border:1px solid var(--line); border-radius:20px; padding:10px 14px; font-size:14px;
-      font-family:'IBM Plex Sans',sans-serif; outline:none;
+
+    .chat-head .agent-avatar {
+      position: relative;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--cyan-deep);
+      color: #E7F3F1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
     }
-    .chat-input-row input:focus{border-color:var(--cyan-deep);}
-    .chat-input-row button{
-      background:var(--key); color:var(--paper); border:none; border-radius:50%; width:38px; height:38px;
-      cursor:pointer; display:flex; align-items:center; justify-content:center; flex:0 0 auto;
+
+    .chat-head .agent-avatar svg {
+      width: 20px;
+      height: 20px;
     }
-    .chat-input-row button:hover{background:var(--cyan-deep);}
-    .chat-input-row button:disabled{opacity:.4; cursor:not-allowed;}
-    .typing{display:flex; gap:4px; padding:10px 13px;}
-    .typing span{width:6px;height:6px;border-radius:50%; background:var(--key-soft); opacity:.5; animation:tdot 1s infinite;}
-    .typing span:nth-child(2){animation-delay:.15s;}
-    .typing span:nth-child(3){animation-delay:.3s;}
-    @keyframes tdot{ 0%,100%{opacity:.3; transform:translateY(0);} 50%{opacity:1; transform:translateY(-3px);} }
-    :focus-visible{outline:2px solid var(--cyan-deep); outline-offset:2px;}
+
+    .chat-head .online-dot {
+      position: absolute;
+      right: -1px;
+      bottom: -1px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #3fd0da;
+      border: 2px solid var(--key);
+    }
+
+    .chat-head button {
+      background: none;
+      border: none;
+      color: var(--paper);
+      cursor: pointer;
+      font-size: 18px;
+      line-height: 1;
+      opacity: .8;
+    }
+
+    .chat-head button:hover {
+      opacity: 1;
+    }
+
+    .prechat-card {
+      background: var(--paper-raised);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      margin: 2px 0;
+    }
+
+    .prechat-card p {
+      margin: 0 0 16px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--key);
+    }
+
+    .prechat-field {
+      margin-bottom: 14px;
+    }
+
+    .prechat-field label {
+      display: block;
+      font-size: 13px;
+      color: var(--key-soft);
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    .prechat-field input {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 10px 12px;
+      font-size: 14px;
+      font-family: 'IBM Plex Sans', sans-serif;
+      outline: none;
+      background: var(--paper);
+    }
+
+    .prechat-field input:focus {
+      border-color: var(--cyan-deep);
+      background: var(--paper-raised);
+    }
+
+    .prechat-field .field-error {
+      color: var(--magenta);
+      font-size: 12px;
+      margin-top: 5px;
+      display: none;
+    }
+
+    .prechat-field.invalid input {
+      border-color: var(--magenta);
+    }
+
+    .prechat-field.invalid .field-error {
+      display: block;
+    }
+
+    .prechat-submit {
+      width: 100%;
+      margin-top: 4px;
+      background: var(--cyan-deep);
+      color: #fff;
+      border: none;
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 13px 16px;
+      border-radius: 24px;
+      cursor: pointer;
+    }
+
+    .prechat-submit:hover {
+      background: var(--key);
+    }
+
+    .prechat-submit:disabled {
+      opacity: .6;
+      cursor: not-allowed;
+    }
+
+    .chat-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 14px;
+      background: var(--paper);
+    }
+
+    .msg {
+      max-width: 82%;
+      padding: 10px 13px;
+      border-radius: 12px;
+      line-height: 1.4;
+    }
+
+    .msg.bot {
+      background: var(--paper-raised);
+      border: 1px solid var(--line);
+      align-self: flex-start;
+      border-bottom-left-radius: 3px;
+    }
+
+    .msg.user {
+      background: var(--cyan-deep);
+      color: #fff;
+      align-self: flex-end;
+      border-bottom-right-radius: 3px;
+    }
+
+    .quick-replies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 2px;
+    }
+
+    .quick-replies button {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 13px;
+      background: var(--paper-raised);
+      border: 1px solid var(--cyan-deep);
+      color: var(--cyan-deep);
+      padding: 8px 12px;
+      border-radius: 16px;
+      cursor: pointer;
+    }
+
+    .quick-replies button:hover {
+      background: var(--cyan-deep);
+      color: #fff;
+    }
+
+    .chat-input-row {
+      display: flex;
+      gap: 8px;
+      padding: 12px;
+      border-top: 1px solid var(--line);
+      background: var(--paper-raised);
+    }
+
+    .chat-input-row input {
+      flex: 1;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 10px 14px;
+      font-size: 14px;
+      font-family: 'IBM Plex Sans', sans-serif;
+      outline: none;
+    }
+
+    .chat-input-row input:focus {
+      border-color: var(--cyan-deep);
+    }
+
+    .chat-input-row button {
+      background: var(--key);
+      color: var(--paper);
+      border: none;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+    }
+
+    .chat-input-row button:hover {
+      background: var(--cyan-deep);
+    }
+
+    .chat-input-row button:disabled {
+      opacity: .4;
+      cursor: not-allowed;
+    }
+
+    .typing {
+      display: flex;
+      gap: 4px;
+      padding: 10px 13px;
+    }
+
+    .typing span {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--key-soft);
+      opacity: .5;
+      animation: tdot 1s infinite;
+    }
+
+    .typing span:nth-child(2) {
+      animation-delay: .15s;
+    }
+
+    .typing span:nth-child(3) {
+      animation-delay: .3s;
+    }
+
+    @keyframes tdot {
+
+      0%,
+      100% {
+        opacity: .3;
+        transform: translateY(0);
+      }
+
+      50% {
+        opacity: 1;
+        transform: translateY(-3px);
+      }
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--cyan-deep);
+      outline-offset: 2px;
+    }
   </style>
 </head>
+
 <body>
 
-<header class="site">
-  <div class="wrap nav">
-    <div class="brand">
-      <span class="dots"><span></span><span></span><span></span></span>
-      PrintLine Support
+  <header class="site">
+    <div class="wrap nav">
+      <div class="brand">
+        <span class="dots"><span></span><span></span><span></span></span>
+        PrintLine Support
+      </div>
+      <nav class="nav-links">
+        <a href="index.html#issues">Issues We Fix</a>
+        <!-- <a href="index.html#brands">Driver Help</a> -->
+        <a href="brand-hp.html">HP</a>
+        <a href="brand-brother.html">Brother</a>
+        <a href="brand-canon.html">Canon</a>
+        <a href="brand-epson.html">Epson</a>
+        <a href="index.html#how">How It Works</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="index.html#about">About</a>
+        <a href="#" class="active" style="border-bottom: 1px solid var(--key);">Contact</a>
+      </nav>
+      <a href="#" class="nav-cta" id="nav-chat-open">Start live chat</a>
     </div>
-    <nav class="nav-links">
-      <a href="index.html#issues">Issues We Fix</a>
-      <!-- <a href="index.html#brands">Driver Help</a> -->
-      <a href="brand-hp.html">HP</a>
-      <a href="brand-brother.html">Brother</a>
-      <a href="brand-canon.html">Canon</a>
-      <a href="brand-epson.html">Epson</a>
-      <a href="index.html#how">How It Works</a>
-      <a href="index.html#reviews">Reviews</a>
-      <a href="index.html#about">About</a>
-      <a href="#" class="active" style="border-bottom: 1px solid var(--key);">Contact</a>
-    </nav>
-    <a href="#" class="nav-cta" id="nav-chat-open">Start live chat</a>
-  </div>
-</header>
+  </header>
 
-<section class="page-section" id="contact">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="section-eyebrow">Get In Touch</div>
-      <h2 class="section-title">Contact Support Staff</h2>
-      <p>Prefer email or phone assistance over live chat? Share your printer issue in detail, and our technical support crew will reach back directly to help.</p>
-    </div>
-    <div class="contact-grid">
-      <div>
-        <form id="support-contact-form" class="contact-form">
-          <div class="field">
-            <label for="contact-name">Full Name</label>
-            <input type="text" id="contact-name" name="name" required placeholder="Your Name">
-          </div>
-          <div class="field">
-            <label for="contact-email">Email Address</label>
-            <input type="email" id="contact-email" name="email" required placeholder="you@domain.com">
-          </div>
-          <div class="field">
-            <label for="contact-phone">Phone Number (Optional)</label>
-            <input type="tel" id="contact-phone" name="phone" placeholder="(555) 123-4567">
-          </div>
-          <div class="field">
-            <label for="contact-issue">Primary Printer Issue</label>
-            <select id="contact-issue" name="issue">
-              <option value="General Support Request">General Diagnostic Request</option>
-              <option value="Wi-Fi connectivity issues">Wi-Fi &amp; LAN Connections</option>
-              <option value="Printer offline error status">Status Showing "Offline"</option>
-              <option value="Scanner and software driver help">Scanners &amp; Local Drivers</option>
-              <option value="Paper jam physical failure">Jams &amp; Roller Feeding Jams</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="contact-message">Provide details of what's happening</label>
-            <textarea id="contact-message" name="message" required placeholder="Include your printer brand/model (e.g. HP OfficeJet 3830) and the error message you are getting..."></textarea>
-          </div>
-          <button type="submit" class="btn-submit" id="contact-submit-btn">Submit Support Request</button>
-          
-          <div id="contact-success-msg" class="contact-success">
-            <strong>Support Request Logged!</strong> Your details have been delivered safely. One of our specialists will review your log and reach back via email or phone shortly.
-          </div>
-        </form>
+  <section class="page-section" id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow">Get In Touch</div>
+        <h2 class="section-title">Contact Support Staff</h2>
+        <p>Prefer email or phone assistance over live chat? Share your printer issue in detail, and our technical
+          support crew will reach back directly to help.</p>
       </div>
-      <div class="contact-info">
-        <h3>Alternative Channels</h3>
-        <div class="info-item">
-          <span class="icon">💬</span>
-          <div class="content">
-            <strong>24/7 Live Chat</strong>
-            Our fastest option. Click the chat launcher in the lower right corner to connect directly to Laura.
-          </div>
-        </div>
-        <div class="info-item">
-          <span class="icon">✉️</span>
-          <div class="content">
-            <strong>General Inquiries</strong>
-            support@printlinesupport.com<br>Response times average under 2 hours.
-          </div>
-        </div>
-        <div class="info-item">
-          <span class="icon">⏰</span>
-          <div class="content">
-            <strong>Specialist Shift Schedule</strong>
-            Active technicians monitor queue metrics Monday through Sunday, 365 days a year.
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      <div class="contact-grid">
+        <div>
+          <form id="support-contact-form" class="contact-form">
+            <div class="field">
+              <label for="contact-name">Full Name</label>
+              <input type="text" id="contact-name" name="name" required placeholder="Your Name">
+            </div>
+            <div class="field">
+              <label for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" name="email" required placeholder="you@domain.com">
+            </div>
+            <div class="field">
+              <label for="contact-phone">Phone Number (Optional)</label>
+              <input type="tel" id="contact-phone" name="phone" placeholder="(555) 123-4567">
+            </div>
+            <div class="field">
+              <label for="contact-issue">Primary Printer Issue</label>
+              <select id="contact-issue" name="issue">
+                <option value="General Support Request">General Diagnostic Request</option>
+                <option value="Wi-Fi connectivity issues">Wi-Fi &amp; LAN Connections</option>
+                <option value="Printer offline error status">Status Showing "Offline"</option>
+                <option value="Scanner and software driver help">Scanners &amp; Local Drivers</option>
+                <option value="Paper jam physical failure">Jams &amp; Roller Feeding Jams</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="contact-message">Provide details of what's happening</label>
+              <textarea id="contact-message" name="message" required
+                placeholder="Include your printer brand/model (e.g. HP OfficeJet 3830) and the error message you are getting..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit" id="contact-submit-btn">Submit Support Request</button>
 
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <div class="brand" style="margin-bottom:12px;">
-          <span class="dots"><span></span><span></span><span></span></span>
-          PrintLine Support
+            <div id="contact-success-msg" class="contact-success">
+              <strong>Support Request Logged!</strong> Your details have been delivered safely. One of our specialists
+              will review your log and reach back via email or phone shortly.
+            </div>
+          </form>
         </div>
-        <p>Premium online technical support for wireless printers, scanners, local driver installations, and persistent system errors.</p>
-      </div>
-      <div class="foot-links">
-        <div class="foot-col">
-          <h4>Navigation</h4>
-          <a href="index.html#issues">Issues We Fix</a>
-          <a href="index.html#brands">Driver Help</a>
-          <a href="index.html#how">How It Works</a>
-        </div>
-        <div class="foot-col">
-          <h4>Our Company</h4>
-          <a href="index.html#about">About Us</a>
-          <a href="#">Contact Us</a>
+        <div class="contact-info">
+          <h3>Alternative Channels</h3>
+          <div class="info-item">
+            <span class="icon">💬</span>
+            <div class="content">
+              <strong>24/7 Live Chat</strong>
+              Our fastest option. Click the chat launcher in the lower right corner to connect directly to Laura.
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="icon">✉️</span>
+            <div class="content">
+              <strong>General Inquiries</strong>
+              support@printlinesupport.com<br>Response times average under 2 hours.
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="icon">⏰</span>
+            <div class="content">
+              <strong>Specialist Shift Schedule</strong>
+              Active technicians monitor queue metrics Monday through Sunday, 365 days a year.
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="foot-bottom">
-      <div>© 2026 PrintLine Support. All rights reserved.</div>
-      <div class="disclaimer-box">
-        Disclaimer: PrintLine Support is an independent provider of technical support services for home and office printers, scanners, and software. We are not affiliated with, authorized by, sponsored by, or endorsed by any hardware brand (such as HP, Canon, Epson, Brother, Lexmark, etc.) or software publisher unless specifically stated. Any brand names, trademarks, or product models used on this site are solely for nominative, descriptive, and reference purposes.
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <div class="brand" style="margin-bottom:12px;">
+            <span class="dots"><span></span><span></span><span></span></span>
+            PrintLine Support
+          </div>
+          <p>Premium online technical support for wireless printers, scanners, local driver installations, and
+            persistent system errors.</p>
+        </div>
+        <div class="foot-links">
+          <div class="foot-col">
+            <h4>Navigation</h4>
+            <a href="index.html#issues">Issues We Fix</a>
+            <a href="index.html#brands">Driver Help</a>
+            <a href="index.html#how">How It Works</a>
+          </div>
+          <div class="foot-col">
+            <h4>Our Company</h4>
+            <a href="index.html#about">About Us</a>
+            <a href="#">Contact Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <div>© 2026 PrintLine Support. All rights reserved.</div>
+        <div class="disclaimer-box">
+          Disclaimer: PrintLine Support is an independent provider of technical support services for home and office
+          printers, scanners, and software. We are not affiliated with, authorized by, sponsored by, or endorsed by any
+          hardware brand (such as HP, Canon, Epson, Brother, Lexmark, etc.) or software publisher unless specifically
+          stated. Any brand names, trademarks, or product models used on this site are solely for nominative,
+          descriptive, and reference purposes.
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<button id="chat-launcher" aria-haspopup="true" aria-expanded="false" aria-label="Open live chat widget">
-  <svg viewBox="0 0 24 24" fill="currentColor">
-    <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
-  </svg>
-  <span class="launcher-dot"></span>
-</button>
+  <button id="chat-launcher" aria-haspopup="true" aria-expanded="false" aria-label="Open live chat widget">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z" />
+    </svg>
+    <span class="launcher-dot"></span>
+  </button>
 
-<div id="chat-panel">
-  <div class="chat-head">
-    <div class="who">
-      <div class="agent-avatar">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/>
+  <div id="chat-panel">
+    <div class="chat-head">
+      <div class="who">
+        <div class="agent-avatar">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z" />
+          </svg>
+          <span class="online-dot"></span>
+        </div>
+        <div class="who-text">
+          <strong>Laura</strong>
+          <small>PrintLine Support</small>
+        </div>
+      </div>
+      <button id="chat-close" aria-label="Close chat window">×</button>
+    </div>
+    <div class="chat-body" id="chat-body"></div>
+    <div class="chat-input-row" id="chat-input-row" hidden>
+      <input type="text" id="chat-input" placeholder="Type your message..." aria-label="Type message text here">
+      <button id="chat-send" aria-label="Send message to specialist">
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;">
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
         </svg>
-        <span class="online-dot"></span>
-      </div>
-      <div class="who-text">
-        <strong>Laura</strong>
-        <small>PrintLine Support</small>
-      </div>
+      </button>
     </div>
-    <button id="chat-close" aria-label="Close chat window">×</button>
   </div>
-  <div class="chat-body" id="chat-body"></div>
-  <div class="chat-input-row" id="chat-input-row" hidden>
-    <input type="text" id="chat-input" placeholder="Type your message..." aria-label="Type message text here">
-    <button id="chat-send" aria-label="Send message to specialist">
-      <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;">
-        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
-      </svg>
-    </button>
-  </div>
-</div>
 
-<script src="chat1.js"></script>
-<script>
-  // Simple client-side Contact Form handling
-  document.getElementById('support-contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const submitBtn = document.getElementById('contact-submit-btn');
-    const successMsg = document.getElementById('contact-success-msg');
-    
-    // Disable submit button and provide feedback
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending Log...';
-    
-    // Simulate API delivery delay and display the success response message
-    setTimeout(() => {
-      successMsg.style.display = 'block';
-      submitBtn.textContent = 'Support Request Submitted';
-      this.reset();
-    }, 1000);
-  });
-</script>
+  <script src="chat.js"></script>
+  <script>
+    document.getElementById('support-contact-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const submitBtn = document.getElementById('contact-submit-btn');
+      const successMsg = document.getElementById('contact-success-msg');
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      const formData = {
+        name: document.getElementById('contact-name').value.trim(),
+        email: document.getElementById('contact-email').value.trim(),
+        phone: document.getElementById('contact-phone').value.trim(),
+        issue: document.getElementById('contact-issue').value,
+        message: document.getElementById('contact-message').value.trim(),
+        page: window.location.href,
+        submitted_at: new Date().toISOString()
+      };
+
+      try {
+
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
+
+        if (!response.ok)
+          throw new Error("Unable to submit");
+
+        successMsg.style.display = "block";
+
+        // Enhanced Conversions
+        gtag('set', 'user_data', {
+          email: formData.email,
+          phone_number: formData.phone,
+          address: {
+            first_name: formData.name
+          }
+        });
+
+        // Google Ads Conversion
+        gtag('event', 'conversion', {
+          send_to: 'AW-18366252825/GT-TBNDGR65'
+        });
+
+        this.reset();
+
+        submitBtn.textContent = "Support Request Submitted";
+
+      }
+      catch (err) {
+
+        alert("Unable to submit your request. Please try again.");
+
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit Support Request";
+
+        console.error(err);
+      }
+    });
+  </script>
 </body>
+
 </html>
