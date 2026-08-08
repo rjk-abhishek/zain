@@ -3,6 +3,9 @@
 
   "name": "zain",
 
+  // Replace this value with your Cloudflare account ID before running `wrangler publish`.
+  "account_id": "1679cd00d55e19d599f5ee07be9dad83",
+
   "compatibility_date": "2026-08-05",
 
   "pages_build_output_dir": ".",
